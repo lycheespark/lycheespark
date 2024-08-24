@@ -12,7 +12,6 @@
     <description>Common tools used in services</description>
     <url>https://github.com/lycheespark/lycheespark.git</url>
 
-    <!-- 使用 Apache 许可证 -->
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
@@ -22,7 +21,6 @@
         </license>
     </licenses>
 
-    <!-- 开发人员信息 -->
     <developers>
         <developer>
             <name>lychee</name>
@@ -32,7 +30,6 @@
         </developer>
     </developers>
 
-    <!-- Maven SCM  -->
     <scm>
         <connection>scm:git:https://github.com/lycheespark/lycheespark.git</connection>
         <developerConnection>scm:git:https://github.com/lycheespark/lycheespark.git</developerConnection>
@@ -42,7 +39,6 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- 项目版本 -->
         <lychee-spark.version>1.0.0</lychee-spark.version>
     </properties>
 
@@ -61,27 +57,22 @@
         <module>lychee-spark-common</module>
         <module>lychee-spark-wechat</module>
         <module>lychee-spark-map</module>
-<!--        <module>lychee-spark-start</module>-->
     </modules>
 
     <dependencyManagement>
         <dependencies>
-            <!-- SpringBoot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <!-- 实际使用的Spring Boot版本 -->
                 <version>2.7.10</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- 通用模块 -->
             <dependency>
                 <groupId>io.github.lycheespark</groupId>
                 <artifactId>lychee-spark-common</artifactId>
                 <version>${lychee-spark.version}</version>
             </dependency>
-            <!-- 微信模块 -->
             <dependency>
                 <groupId>io.github.lycheespark</groupId>
                 <artifactId>lychee-spark-wechat</artifactId>
@@ -120,7 +111,6 @@
         </pluginManagement>
 
         <plugins>
-            <!-- Publisher Early Access 支持通过 Maven 发布。为此，您需要配置项目以使用 central-publishing-maven-plugin。 -->
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
