@@ -1,0 +1,41 @@
+server:
+  # 服务器的HTTP端口，默认是8888
+  port: 8888
+  servlet:
+    # 应用的访问路径
+    context-path: /lychee-spark
+  # tomcat容器配置
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # 连接数满后的排队数，默认是100
+    accept-count: 100
+    threads:
+      # tomcat最大线程数，默认是800
+      max: 800
+      # Tomcat启动初始的线程数，默认值10
+      min-spare: 10
+
+# SpringBoot配置
+spring:
+  servlet:
+    multipart:
+      # 该配置项用于设置单个上传文件的最大允许大小。
+      max-file-size: 100MB
+      # 该配置项用于设置整个请求的最大允许大小。
+      max-request-size: 100MB
+  # 模板引擎配置
+  thymeleaf:
+    # 该配置决定是否缓存 Thymeleaf 模板。
+    cache: false
+    # 该配置指定 Thymeleaf 模板文件的默认前缀。
+    prefix: classpath:/templates/
+    # 该配置指定 Thymeleaf 模板文件的默认后缀。
+    suffix: .html
+    # 该配置设置 Thymeleaf 模板的解析模式。
+    mode: HTML5
+    # 该配置指定 Thymeleaf 模板文件的字符编码。
+    encoding: UTF-8
+    servlet:
+      # 该配置指定渲染后的 Thymeleaf 模板响应的 MIME 类型和字符集。
+      content-type: text/html

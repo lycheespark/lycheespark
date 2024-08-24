@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <title>Lychee-Spark-工作台</title>
+</head>
+<body>
+<header class="header">
+  <h1>全局头部</h1>
+</header>
+
+<div layout:fragment="content">
+  <!-- 子页面内容将在这里渲染 -->
+</div>
+
+<footer class="footer">
+  <p>全局页脚</p>
+</footer>
+</body>
+<style>
+  .header{
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+  }
+</style>
+</html>

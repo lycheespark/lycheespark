@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<div layout:fragment="content">
+    <h2>欢迎使用 Thymeleaf!</h2>
+    <p th:text="'当前时间: ' + ${currentTime}"></p>
+</div>
+</html>
